@@ -1,7 +1,7 @@
 import React from 'react'
-import Login from './login';
+import Login from './auth/login';
 import { Routes, Route, Link } from 'react-router-dom';
-import Sign from './sign_up'
+import Sign from './auth/sign_up'
 const Navbar = () => {
     return (
         <div>
