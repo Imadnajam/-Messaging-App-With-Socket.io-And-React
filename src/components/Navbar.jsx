@@ -5,7 +5,7 @@ import Sign from './auth/sign_up'
 const Navbar = () => {
     return (
         <div>
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <nav class="navbar navbar-expand-lg navbar-primary bg-light ">
 
                 <ul class="navbar-nav mr-auto">
                     <li class="nav-item active">

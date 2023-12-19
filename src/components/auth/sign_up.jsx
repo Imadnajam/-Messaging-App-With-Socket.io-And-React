@@ -10,7 +10,7 @@ const Login = () => {
     setUserN('')
     }
   return (
-    <Container className='align-items-center d-flex' style={{height:'100vh'}} >
+    <Container className='align-items-center d-flex ' style={{height:'100vh'}} >
       <Form onSubmit={handleSubmit}  className='w-100'  >
         <Form.Label className='text text-primary'>name</Form.Label>
         <Form.Control type='text' value={userN} onChange={(e)=>{setUserN(e.target.value)}} />
@@ -20,8 +20,8 @@ const Login = () => {
         <Form.Control type='password' value={userE} onChange={(e)=>{setUserE(e.target.value)}}  />
         <Form.Label className='text text-primary '>Confirm Password</Form.Label>
         <Form.Control type='password' value={userE} onChange={(e)=>{setUserE(e.target.value)}}  />
-        <Button type='submit' variant={'info'} className='mr-4'> Create </Button>
-        <Button type='reset' className='bnt btn-danger mr-2'> Annuler </Button>
+        <Button type='submit' variant={'primary'} className='m-2'> Create </Button>
+        <Button type='reset' className='bnt btn-danger m-2'> Annuler </Button>
       </Form>
     </Container>
   )
