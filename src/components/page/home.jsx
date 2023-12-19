@@ -10,7 +10,11 @@ const Home = ({ nom }) => {
     const [taskN, setTaskN] = useState('')
     function handleSubmit(e) {
         e.preventDefault();
-        setListTask([...listTask, task])
+        const test = listTask.find((items) => items == task);
+   if(!test){
+    setListTask([...listTask, task])
+   }else(alert('you already add this  task' ))
+        
 
     }
     function DT(e) {
@@ -27,9 +31,9 @@ const Home = ({ nom }) => {
     }
     function CT(e) {
         const itm = e.target.value;
-        alert(taskN)
-        setTaskE(itm)
-        setTaskC(true)
+        setListTask(listTask.filter((items) => items !== itm))
+        setTaskE(false)
+        setTaskC(false)
     }
     useEffect(() => {
         setTaskE(false)
