@@ -2,6 +2,7 @@ import React from 'react'
 import Login from './auth/login';
 import { Routes, Route, Link } from 'react-router-dom';
 import Sign from './auth/sign_up'
+import About from './page/about';
 const Navbar = () => {
     return (
         <div>
@@ -15,12 +16,17 @@ const Navbar = () => {
                     <li class="nav-item active">
                         <Link to={'/sign_up'} className='nav-link'>sign up</Link>
                     </li>
+                    <li class="nav-item active">
+                        <Link to={'/About'} className='nav-link'>About</Link>
+                    </li>
                 </ul>
             </nav>
+            
 
             <Routes>
                 <Route path='/login' element={<Login />} />
                 <Route path='/sign_up' element={<Sign />} />
+                <Route path='/About' element={<About/>} />
             </Routes>
         </div>
     )
