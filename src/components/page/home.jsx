@@ -11,10 +11,10 @@ const Home = ({ nom }) => {
     function handleSubmit(e) {
         e.preventDefault();
         const test = listTask.find((items) => items == task);
-   if(!test){
-    setListTask([...listTask, task])
-   }else(alert('you already add this  task' ))
-        
+        if (!test) {
+            setListTask([...listTask, task])
+        } else (alert('you already add this  task'))
+
 
     }
     function DT(e) {
@@ -36,7 +36,7 @@ const Home = ({ nom }) => {
         setTaskE(false)
         setTaskC(false)
     }
-    
+
     useEffect(() => {
         setTaskE(false)
         setTaskC(false)
@@ -58,15 +58,18 @@ const Home = ({ nom }) => {
                     </Row>
                 </Form>
                 <ListGroup>
+
+                    {taskE ? (
+                        <ListGroup.Item>
+                          <p className='text-waring'>Update the task</p>  <Form.Control type="text" name="task" placeholder="Add a new task" value={taskN} onChange={(e) => { setTaskN(e.target.value) }} />
+                        </ListGroup.Item>
+                    ) : ('')}
+
                     {listTask.map((e, k) => (
                         <ListGroup.Item key={k} className="d-flex justify-content-between align-items-center">
                             {e}
 
-                            {taskE ? (
-                                
-                                    <Form.Control type="text" name="task" placeholder="Add a new task" value={taskN} onChange={(e) => { setTaskN(e.target.value) }} />
-                                    
-                            ) : ('')}
+
 
 
 
