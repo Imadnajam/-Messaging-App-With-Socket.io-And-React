@@ -71,11 +71,13 @@ const Home = ({ nom }) => {
 
 
 
-
-
-                            <Button variant='danger' value={e} onClick={DT}>Delete</Button>
+                        <div>
+                                <Button variant='danger' value={e} onClick={DT} className='m-2'>Delete</Button>
                             {taskC ? (<Button variant='success' value={e} onClick={CT}>Confirm</Button>) : (<Button variant='success' value={e} onClick={ST}>Set</Button>)}
-                        </ListGroup.Item>
+                         
+                        </div>
+
+                       </ListGroup.Item>
                     ))}
                 </ListGroup>
 
