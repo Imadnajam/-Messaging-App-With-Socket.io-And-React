@@ -30,11 +30,13 @@ const Home = ({ nom }) => {
         setTaskC(true)
     }
     function CT(e) {
-        const itm = e.target.value;
-        setListTask(listTask.filter((items) => items !== itm))
+        const itm1 = e.target.value;
+        setListTask(prevListTask => prevListTask.filter((items) => items !== itm1))
+        setListTask(prevListTask => [...prevListTask, taskN])
         setTaskE(false)
         setTaskC(false)
     }
+    
     useEffect(() => {
         setTaskE(false)
         setTaskC(false)
