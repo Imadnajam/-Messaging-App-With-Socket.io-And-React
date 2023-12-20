@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
+import axios from 'axios';
 
 const Client = () => {
     const [users, setUsers] = useState([]);
     const [pas, setPas] = useState(1);
     async function fetchTrendingPersons(pas) {
         try {
-            const response = await fetch(`https://api.themoviedb.org/3/trending/person/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${pas}`);
-            const data = await response.json();
-            setUsers(data.results);
+            const response = await axios.get(`https://api.themoviedb.org/3/trending/person/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${pas}`);
+           
+            setUsers(response.data.results);
         } catch (error) {
             console.error('Error fetching data:', error);
         }
