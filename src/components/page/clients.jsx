@@ -1,6 +1,5 @@
 import React, { useEffect, useState } from 'react';
 import { Container, Row, Col, Button } from 'react-bootstrap';
-import { json } from 'react-router-dom';
 
 const Client = () => {
     const [users, setUsers] = useState([]);
