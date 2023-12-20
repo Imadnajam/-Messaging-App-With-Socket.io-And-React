@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import { Container, Row, Col ,Button} from 'react-bootstrap';
+import { Container, Row, Col, Button } from 'react-bootstrap';
 import { json } from 'react-router-dom';
 
 const Client = () => {
@@ -14,12 +14,12 @@ const Client = () => {
             console.error('Error fetching data:', error);
         }
     }
-     function Next(){
-      setPas(pas+1)
+    function Next() {
+        setPas(pas + 1)
     }
-    function Prev(){
-        if(pas>1){
-            setPas(pas-1)
+    function Prev() {
+        if (pas > 1) {
+            setPas(pas - 1)
         }
 
     }
@@ -29,7 +29,7 @@ const Client = () => {
 
     return (
         <Container>
-            
+
             <Row>
                 {users.map((person, index) => (
                     <Col key={index} xs={12} md={4}>
@@ -41,13 +41,13 @@ const Client = () => {
             <nav aria-label="Page navigation example">
                 <ul class="pagination justify-content-center">
                     <li class="page-item disabled">
-                    <Button onClick={Prev} variant='secondary' className='m-2'>Previous </Button>
-                        
+                        <Button onClick={Prev} variant='secondary' className='m-2'>Previous </Button>
+
                     </li>
-                 
+
                     <li class="page-item">
-                    <Button onClick={Next} className='m-2'>Next </Button>
-                        
+                        <Button onClick={Next} className='m-2'>Next </Button>
+
                     </li>
                 </ul>
             </nav>
