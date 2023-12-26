@@ -15,7 +15,7 @@ const Client = () => {
             const response = await axios.get(`https://api.themoviedb.org/3/trending/movie/day?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d&page=${pas}`);
             setfilms(response.data.results);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching data: Not Found', error);
         }
     }
     async function findFilm(id) {
@@ -23,7 +23,7 @@ const Client = () => {
             const response = await axios.get(`https://api.themoviedb.org/3/movie/${id}?api_key=0269e1f69afd6ff169f8a6a2d9f0dc4d`);
             setMovieSerchL(response.data);
         } catch (error) {
-            console.error('Error fetching data:', error);
+            console.error('Error fetching data: 404', error);
         }
     }
     function searchMovie() {
