@@ -13,7 +13,7 @@ const Home = ({ nom }) => {
         const test = listTask.find((items) => items == task);
         if (!test) {
             setListTask([...listTask, task])
-        } else (alert('you already add this  task'))
+        } else (alert('you already add this  task b'))
 
 
     }
