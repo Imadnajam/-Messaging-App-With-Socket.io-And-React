@@ -4,6 +4,7 @@ import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap';
 
 const Home = ({ nom }) => {
     const [task, setTask] = useState('')
+    
     const [taskE, setTaskE] = useState(false)
     const [taskC, setTaskC] = useState(false)
     const [listTask, setListTask] = useState([])
