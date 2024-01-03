@@ -6,6 +6,7 @@ const Home = ({ nom }) => {
     const [task, setTask] = useState('')
     
     const [taskE, setTaskE] = useState(false)
+    
     const [taskC, setTaskC] = useState(false)
     const [listTask, setListTask] = useState([])
     const [taskN, setTaskN] = useState('')
