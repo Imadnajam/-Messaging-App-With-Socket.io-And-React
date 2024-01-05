@@ -6,6 +6,6 @@ This project is a simple messaging application built using Socket.io for real-ti
 🏪
 Features
 Real-time messaging: Instantaneous message updates using Socket.io.
-
+🖱️
 User-friendly interface: Clean and intuitive React components for an optimal user experience.
 🦘
