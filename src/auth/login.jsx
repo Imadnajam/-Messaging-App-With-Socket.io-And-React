@@ -1,7 +1,6 @@
 import { React, useState } from 'react'
 import { Container, Form, Button } from 'react-bootstrap'
 import Home from '../page/home'
-
 const Login = () => {
   const [userN, setUserN] = useState('')
   const [userE, setUserE] = useState('')
