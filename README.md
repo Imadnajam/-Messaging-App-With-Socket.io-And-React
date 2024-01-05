@@ -1,6 +1,7 @@
 
 Messaging App with Socket.io and React ⭐
 Overview
+
 This project is a simple messaging application built using Socket.io for real-time communication and React for the frontend user interface.
 🏪
 Features
