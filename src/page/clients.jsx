@@ -3,7 +3,6 @@ import { Container, Row, Col, Button } from 'react-bootstrap';
 import axios from 'axios';
 import '@fortawesome/fontawesome-free/css/all.css';
 
-
 const Client = () => {
     const [films, setfilms] = useState([]);
     const [pas, setPas] = useState(1);
