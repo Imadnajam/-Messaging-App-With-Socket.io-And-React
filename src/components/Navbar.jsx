@@ -4,6 +4,7 @@ import { Routes, Route, Link } from 'react-router-dom';
 import Sign from '../auth/sign_up'
 import About from '../page/about';
 import Client from '../page/clients';
+
 const Navbar = () => {
     return (
         <div>

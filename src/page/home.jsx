@@ -4,7 +4,9 @@ import { Container, Row, Col, Form, Button, ListGroup } from 'react-bootstrap';
 
 const Home = ({ nom }) => {
     const [task, setTask] = useState('')
+    
     const [taskE, setTaskE] = useState(false)
+    
     const [taskC, setTaskC] = useState(false)
     const [listTask, setListTask] = useState([])
     const [taskN, setTaskN] = useState('')
@@ -13,7 +15,7 @@ const Home = ({ nom }) => {
         const test = listTask.find((items) => items == task);
         if (!test) {
             setListTask([...listTask, task])
-        } else (alert('you already add this  task'))
+        } else (alert('you already add this  task b'))
 
 
     }
